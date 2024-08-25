@@ -16,13 +16,11 @@ hoursToWait = int(input())
 
 idx = currentTime
 
-while hoursToWait > 0: #keep looping til it's down to zero
-
+for counterHour in range(0,hoursToWait):
     if idx == (len(hours)-1): # we could just replace '(len(hours) -1)' with the value 23 since that's the max index value.
         idx = 0 # if it's at element 23, we reset it to 0, or midnight.
     else:
-        idx +=1 # increment the index by one.
-    hoursToWait -=1
+        idx +=1 # increment the index by one.11
 
 #display the hour.
 print("Your alarm clock will go off at '{0}:00'.".format(hours[idx])) #We can use idx by itself, however if we have custom values in the hours list, it will not work.
