@@ -16,7 +16,7 @@ earnedPoints = 0
 pointLookup = {0:0,1:0,2:5,3:5,4:15,5:15,6:30,7:30}
 
 while numBooks < 0:
-    numBooks = int(input("Invalid input. Please enter a positive number."))
+    numBooks = int(input("Invalid input. Please enter a positive number.\n"))
 
 if numBooks >= 8:
     earnedPoints = 60
