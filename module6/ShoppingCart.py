@@ -11,25 +11,25 @@ class ShoppingCart:
         self.maxWidth = 100
 
     def add_item(self, item:ItemToPurchase.ItemToPurchase):
-        #add an item to the cart
+        #add cart item
         self.cartItems.append(item)
 
     def remove_item(self, itemName):
-        #remove an item from the cart
+        #remove cart item
         for item in self.cartItems:
             if item.item_name == itemName:
                 self.cartItems.remove(item)
                 return
-        print("Item not found in cart. Nothing removed.")
+        print("Cart item not found. Nothing removed.")
 
     def modify_item(self, item:ItemToPurchase.ItemToPurchase):
-        #modify an item in the cart
+        #modify cart item
         for i in range(len(self.cartItems)):
             if item.item_name != "none" and item.item_price > 0.0 and item.item_quantity > 0 and self.cartItems[i].item_name == item.item_name:
                 self.cartItems[i].item_quantity = item.item_quantity
                 self.cartItems[i].item_price = item.item_price
                 return
-        print("Item not found in cart. Nothing modified.")
+        print("Cart item not found. Nothing modified.")
 
     def get_num_items_in_cart(self):
         return len(self.cartItems)
@@ -86,7 +86,7 @@ class ShoppingCart:
         print(total.center(self.maxWidth))
 
     def getTotalCost(self):
-        #calculate the total cost of all the items in the cart
+        #Get cart total
         total = 0
         for item in self.cartItems:
             total += item.getItemTotal()
