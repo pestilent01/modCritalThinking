@@ -51,7 +51,6 @@ class ShoppingCart:
         self.printItems()
         self.printFooter(self.get_cost_of_cart())
 
-
     def print_descriptions(self):
         header = f"{self.customerName}'s Shopping Cart - {self.currentDate}"
         if (len(self.cartItems) == 0):
@@ -61,12 +60,9 @@ class ShoppingCart:
         self.print("Item Descriptions")
         self.printItemDescriptions()
 
-
-
     def print(self, title):
         #print the TOTAL COST header, but we want it centered.
         print(title.center(self.maxWidth), "\n") #add additional new line after the title
-        
     
     def printItems(self):
         #display the the items in the cart
